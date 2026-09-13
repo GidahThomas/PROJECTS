@@ -100,22 +100,11 @@
     });
   }
 
-  /* ---------- Contact form validation + Web3Forms submission ---------- */
+  /* ---------- Contact form validation + mailto submission ---------- */
   var form = document.getElementById('contactForm');
   var successAlert = document.getElementById('form-success');
-  var errorAlert = document.getElementById('form-error');
   var emailInput = document.getElementById('email');
   var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function showFormSuccess() {
-    errorAlert.classList.add('d-none');
-    successAlert.classList.remove('d-none');
-  }
-
-  function showFormError() {
-    successAlert.classList.add('d-none');
-    errorAlert.classList.remove('d-none');
-  }
 
   emailInput.addEventListener('input', function () {
     emailInput.setCustomValidity(
@@ -123,7 +112,7 @@
     );
   });
 
-  form.addEventListener('submit', async function (e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
     e.stopPropagation();
 
@@ -137,41 +126,19 @@
     }
 
     form.classList.add('was-validated');
-    successAlert.classList.add('d-none');
-    errorAlert.classList.add('d-none');
 
-    var formData = new FormData(form);
-    var payload = Object.fromEntries(formData);
+    var name = form.querySelector('#name').value;
+    var email = emailInput.value;
+    var message = form.querySelector('#message').value;
+    var subject = 'New Contact Form Submission - Akilisoft Website';
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
 
-    var submitBtn = form.querySelector('button[type="submit"]');
-    var originalText = submitBtn.textContent;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+    window.location.href =
+      'mailto:info@akilisoft.co.tz' +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
 
-    try {
-      var response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
-      var result = await response.json();
-
-      if (result.success) {
-        form.reset();
-        form.classList.remove('was-validated');
-        showFormSuccess();
-      } else {
-        showFormError();
-      }
-    } catch (error) {
-      showFormError();
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
-    }
+    successAlert.classList.remove('d-none');
   });
 
 })();
