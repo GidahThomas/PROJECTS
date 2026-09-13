@@ -1,0 +1,304 @@
+/* ==========================================================================
+   Akilisoft Tech Company Limited — Custom overrides on top of Bootstrap 5
+   Loaded AFTER bootstrap.min.css — extends the grid/components, doesn't fight them.
+   ========================================================================== */
+
+:root {
+  --bs-primary: #0B2545;
+  --bs-primary-rgb: 11, 37, 69;
+  --bs-body-bg: #F7F9FC;
+  --bs-body-color: #202b3c;
+  --bs-body-font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bs-link-color: #0B2545;
+  --bs-link-hover-color: #0F9D58;
+
+  --akilisoft-primary: #0B2545;
+  --akilisoft-primary-light: #13396b;
+  --akilisoft-accent: #0F9D58;
+  --akilisoft-accent-dark: #0c7d46;
+  --akilisoft-bg-alt: #EEF2F8;
+  --akilisoft-text-muted: #4d5c74;
+  --akilisoft-border: #dfe5ee;
+}
+
+body {
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-weight: 600;
+  color: var(--akilisoft-primary);
+}
+
+.skip-link {
+  z-index: 1050;
+}
+
+/* ---------- Buttons ---------- */
+.btn-accent {
+  background-color: var(--akilisoft-accent);
+  border-color: var(--akilisoft-accent);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--akilisoft-accent-dark);
+  border-color: var(--akilisoft-accent-dark);
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  color: var(--akilisoft-primary);
+}
+
+/* ---------- Header / Nav ---------- */
+#site-header {
+  background-color: rgba(247, 249, 252, 0.94);
+  backdrop-filter: blur(6px);
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+#site-header.is-scrolled {
+  box-shadow: 0 1px 3px rgba(11, 37, 69, 0.08);
+  background-color: rgba(247, 249, 252, 0.98);
+}
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--akilisoft-primary);
+  letter-spacing: -0.01em;
+}
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--akilisoft-text-muted);
+  position: relative;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--akilisoft-primary);
+}
+.navbar-nav .nav-link.is-active {
+  color: var(--akilisoft-primary);
+}
+.navbar-nav .nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: var(--akilisoft-accent);
+  border-radius: 1px;
+}
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link.is-active::after {
+    display: none;
+  }
+  .navbar-nav .nav-link.is-active {
+    color: var(--akilisoft-accent-dark);
+  }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--akilisoft-primary) 0%, var(--akilisoft-primary-light) 100%);
+  color: #fff;
+}
+.hero-headline {
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.hero-subheadline {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 620px;
+}
+.hero-graphic {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 5.5rem 0;
+}
+.section-alt {
+  background-color: var(--akilisoft-bg-alt);
+}
+.eyebrow {
+  display: inline-block;
+  color: var(--akilisoft-accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  max-width: 700px;
+  margin-bottom: 0.75rem;
+}
+.section-lead {
+  color: var(--akilisoft-text-muted);
+  max-width: 620px;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Scroll-triggered fade-in (Bootstrap has no built-in animation utility for this) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- About ---------- */
+.about-content {
+  color: var(--akilisoft-text-muted);
+  font-size: 1.05rem;
+}
+.about-content p + p {
+  margin-top: 1.25rem;
+}
+.about-content strong {
+  color: var(--akilisoft-primary);
+}
+
+/* ---------- Product / Service cards ---------- */
+.card-icon {
+  color: var(--akilisoft-accent);
+  margin-bottom: 1.1rem;
+}
+.product-card {
+  border: none;
+  border-radius: 0.9rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(11, 37, 69, 0.14) !important;
+}
+.card-tagline {
+  color: var(--akilisoft-accent-dark);
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+}
+.card-features {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.25rem;
+}
+.card-features li {
+  position: relative;
+  padding-left: 1.3rem;
+  color: var(--akilisoft-text-muted);
+  font-size: 0.95rem;
+}
+.card-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--akilisoft-accent);
+}
+.card-description {
+  color: var(--akilisoft-text-muted);
+}
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.tech-badges .badge {
+  background-color: var(--akilisoft-bg-alt);
+  color: var(--akilisoft-primary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  border: 1px solid var(--akilisoft-border);
+}
+.card-positioning {
+  font-size: 0.9rem;
+  color: var(--akilisoft-text-muted);
+  border-top: 1px solid var(--akilisoft-border);
+  padding-top: 1rem;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.service-card {
+  border-radius: 0.9rem;
+  border-color: var(--akilisoft-border) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover {
+  border-color: var(--akilisoft-accent) !important;
+  box-shadow: 0 1px 3px rgba(11, 37, 69, 0.08);
+}
+
+/* ---------- Why Us pillars ---------- */
+.pillar-icon {
+  color: var(--akilisoft-primary);
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(11, 37, 69, 0.08);
+  margin-bottom: 1.1rem;
+}
+.pillar h3 {
+  color: var(--akilisoft-primary);
+}
+
+/* ---------- Contact ---------- */
+.contact-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--akilisoft-accent-dark);
+}
+.contact-details a {
+  color: var(--akilisoft-primary);
+  font-weight: 600;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--akilisoft-accent);
+  box-shadow: 0 0 0 0.2rem rgba(15, 157, 88, 0.15);
+}
+/* ---------- Footer ---------- */
+footer .logo {
+  color: #fff;
+}
+footer .nav-link.text-light-emphasis {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+footer .nav-link.text-light-emphasis:hover {
+  color: #fff !important;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 767.98px) {
+  .section {
+    padding: 4rem 0;
+  }
+}
