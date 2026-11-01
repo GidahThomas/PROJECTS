@@ -71,6 +71,13 @@ button:focus-visible,
   transform: translateY(0);
 }
 
+.btn:not(.btn-sm) {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn-outline-light:hover {
   color: var(--akilisoft-primary);
 }
@@ -752,13 +759,60 @@ button:focus-visible,
 }
 
 /* ---------- Responsive tweaks ---------- */
+@media (max-width: 991.98px) {
+  #site-header {
+    padding-block: 0.5rem;
+  }
+
+  #site-header .navbar-toggler {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  #primaryNav {
+    flex-basis: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    padding-inline: 0.75rem;
+  }
+
+  .navbar-nav .btn {
+    min-height: 44px;
+    margin-top: 0.25rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
+    scroll-margin-top: 5rem;
   }
 
   .section-title {
     font-size: clamp(1.4rem, 5vw, 1.9rem);
+  }
+
+  .section-lead {
+    margin-bottom: 1.75rem;
+    font-size: 1rem;
+  }
+
+  .hero > .container.py-5 {
+    padding-block: 2.5rem !important;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.85rem, 7.5vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .hero-subheadline {
+    font-size: 1.05rem;
   }
 
   .hero::after {
@@ -766,6 +820,37 @@ button:focus-visible,
     right: -13rem;
     width: 30rem;
   }
+}
+
+@media (max-width: 479.98px) {
+  .hero .d-flex .btn {
+    width: 100%;
+  }
+
+  .cta-banner .btn {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .contact-form .card-body {
+    padding: 1.25rem !important;
+  }
+
+  .team-founder-details {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+
+  .team-member-card {
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+}
+
+.footer-quick-links a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
