@@ -11,7 +11,7 @@ The current public deployment is [projects-opal-seven.vercel.app](https://projec
 
 ## Contact
 
-The Contact page uses email only. Its email link opens the visitor's configured mail app and makes no claim that a message has been sent before the visitor sends it.
+The Contact page provides name, email, organisation, enquiry type, subject, and message fields. Submitting validates the required fields and opens a prefilled draft to `info@akilisoft.co.tz` in the visitor's configured email application. The website does not send or store messages; visitors must press Send in their email app. A direct `mailto:` link is available if the app handoff is not configured.
 
 ## Static-site feature scope
 

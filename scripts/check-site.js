@@ -102,6 +102,25 @@ if (!htmlFiles.includes('index.html')) {
   reportError(root, 'missing index.html');
 }
 
+const contactPagePath = path.join(root, 'contact.html');
+if (!fs.existsSync(contactPagePath)) {
+  reportError(root, 'missing contact.html');
+} else {
+  const contactHtml = fs.readFileSync(contactPagePath, 'utf8');
+  for (const field of ['name', 'email', 'subject', 'message']) {
+    const fieldPattern = new RegExp(`<input\\b(?=[^>]*\\bname=["']${field}["'])(?=[^>]*\\brequired\\b)[^>]*>|<textarea\\b(?=[^>]*\\bname=["']${field}["'])(?=[^>]*\\brequired\\b)[^>]*>`, 'i');
+    if (!fieldPattern.test(contactHtml)) {
+      reportError(contactPagePath, `contact form is missing a required ${field} field`);
+    }
+  }
+  if (!/<form\b(?=[^>]*\bid=["']contact-form["'])(?=[^>]*\baction=["']mailto:info@akilisoft\.co\.tz["'])[^>]*>/i.test(contactHtml)) {
+    reportError(contactPagePath, 'contact form must have an email fallback action');
+  }
+  if (!/href=["']mailto:info@akilisoft\.co\.tz["']/i.test(contactHtml)) {
+    reportError(contactPagePath, 'contact page must retain a direct email link');
+  }
+}
+
 if (!fs.existsSync(sitemapPath)) {
   reportError(root, 'missing sitemap.xml');
 } else {

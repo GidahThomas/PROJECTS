@@ -135,13 +135,49 @@
           <section class="card border-0 shadow-sm" aria-labelledby="email-contact-heading">
             <div class="card-body p-4">
               <h2 id="email-contact-heading" class="h4">Contact us by email</h2>
-              <p>Use your email app to write to our team. Your message is sent only after you press Send in that app.</p>
-              <a class="btn btn-accent w-100" href="mailto:info@akilisoft.co.tz?subject=Website%20enquiry">
-                Email Akilisoft
-              </a>
+              <p>Complete the fields and your email app will open with a draft addressed to our team. Review it and press Send in that app.</p>
+              <form id="contact-form" class="contact-form" action="mailto:info@akilisoft.co.tz" method="post" enctype="text/plain">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-name">Your name <span aria-hidden="true">*</span></label>
+                    <input class="form-control" id="contact-name" name="name" autocomplete="name" maxlength="100" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-email">Email address <span aria-hidden="true">*</span></label>
+                    <input class="form-control" id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-organization">Organisation <span class="text-body-secondary">(optional)</span></label>
+                    <input class="form-control" id="contact-organization" name="organization" autocomplete="organization" maxlength="120">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="contact-enquiry-type">Enquiry type</label>
+                    <select class="form-select" id="contact-enquiry-type" name="enquiryType">
+                      <option>General enquiry</option>
+                      <option>Software development</option>
+                      <option>Product discussion</option>
+                      <option>Technical support or maintenance</option>
+                      <option>Careers</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="contact-subject">Subject <span aria-hidden="true">*</span></label>
+                    <input class="form-control" id="contact-subject" name="subject" maxlength="120" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="contact-message">How can we help? <span aria-hidden="true">*</span></label>
+                    <textarea class="form-control" id="contact-message" name="message" rows="5" maxlength="2000" required></textarea>
+                    <div class="form-text">Do not include passwords, access tokens, or sensitive personal information.</div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-accent w-100" type="submit">Continue in email</button>
+                  </div>
+                </div>
+                <p id="contact-form-status" class="small mt-3 mb-0" aria-live="polite"></p>
+              </form>
               <p class="small text-body-secondary mt-3 mb-0">
-                If the button does not open an email app, copy this address:
-                <a href="mailto:info@akilisoft.co.tz">info@akilisoft.co.tz</a>
+                This website does not send or store your message. If no email app opens, email us directly at
+                <a href="mailto:info@akilisoft.co.tz">info@akilisoft.co.tz</a>.
               </p>
             </div>
           </section>

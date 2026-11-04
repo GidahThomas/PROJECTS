@@ -85,6 +85,36 @@
     });
   }
 
+  /* ---------- Email-based contact form ---------- */
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var status = document.getElementById('contact-form-status');
+      if (!contactForm.reportValidity()) return;
+
+      var formData = new FormData(contactForm);
+      var subject = '[' + formData.get('enquiryType') + '] ' + formData.get('subject');
+      var body = [
+        'Name: ' + formData.get('name'),
+        'Email: ' + formData.get('email'),
+        'Organisation: ' + (formData.get('organization') || 'Not provided'),
+        'Enquiry type: ' + formData.get('enquiryType'),
+        '',
+        formData.get('message')
+      ].join('\r\n');
+      var mailto = 'mailto:info@akilisoft.co.tz?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      if (status) {
+        status.textContent = 'Your email app should open with this draft. The message is sent only after you press Send there.';
+      }
+
+      window.location.href = mailto;
+    });
+  }
+
   /* ---------- Smooth scroll for in-page anchor links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
