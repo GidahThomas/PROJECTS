@@ -11,6 +11,14 @@
 
 The Contact page uses email only. Its email link opens the visitor's configured mail app and makes no claim that a message has been sent before the visitor sends it.
 
+## Static-site feature scope
+
+- The Support page provides email links only; it does not create stored support tickets.
+- The Client Portal page is informational. Secure sign-in, client-specific access, project tracking, and document storage need a backend and verified account provisioning.
+- The Insights page contains static editorial content and has no publishing/CMS workflow.
+- The Company Profile page uses the browser print dialog to save or print the profile; no downloadable PDF is currently provided.
+- Full Kiswahili page translations require reviewed translation copy before publication.
+
 ## Visual assets
 
 The site uses original, local SVG illustrations in `assets/illustrations/` and the branded social-preview image at `assets/og-image.png`. Product dashboard visuals are explicitly presented as illustrative mockups, not screenshots of deployed software. The founder's genuine photograph remains separate in `images/CEO.png`; no generated portrait is used.

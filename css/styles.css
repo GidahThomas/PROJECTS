@@ -927,6 +927,138 @@ button:focus-visible,
   font-size: 0.875rem;
 }
 
+.faq-group {
+  max-width: 52rem;
+  margin-top: 2rem;
+}
+
+.faq-category {
+  margin-bottom: 0.75rem;
+  color: var(--akilisoft-primary);
+  font-size: 1.1rem;
+}
+
+.faq-item {
+  margin-bottom: 0.65rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--akilisoft-border);
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+.faq-item summary {
+  color: var(--akilisoft-primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin: 0.75rem 0 0;
+  color: var(--akilisoft-text-muted);
+}
+
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.portfolio-filters .is-active {
+  color: #fff;
+  border-color: var(--akilisoft-primary);
+  background: var(--akilisoft-primary);
+}
+
+.portfolio-project[hidden] {
+  display: none !important;
+}
+
+.insight-card {
+  display: flex;
+  height: 100%;
+  min-height: 15rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border: 1px solid var(--akilisoft-border);
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(7, 27, 53, 0.06);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 2rem rgba(7, 27, 53, 0.11);
+}
+
+.insight-card h2 {
+  margin: 1rem 0 auto;
+}
+
+.insight-article {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--akilisoft-border);
+  scroll-margin-top: 6rem;
+}
+
+.insight-article p {
+  color: var(--akilisoft-text-muted);
+}
+
+.profile-print-title {
+  display: none;
+}
+
+@media print {
+  body {
+    color: #000;
+    font-size: 11pt;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .profile-document,
+  .profile-document * {
+    visibility: visible !important;
+  }
+
+  .profile-document {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .profile-print-title {
+    display: block;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #071B35;
+  }
+
+  .profile-print-title h1 {
+    margin: 0;
+    font-size: 22pt;
+  }
+
+  .profile-print-title p {
+    margin: 0.25rem 0 0;
+  }
+
+  .profile-document .pillar {
+    border: 1px solid #999;
+    box-shadow: none;
+  }
+}
+
 @media (max-width: 767.98px) {
   .site-footer {
     padding-top: 3rem;

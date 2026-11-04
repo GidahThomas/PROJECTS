@@ -77,9 +77,16 @@
   <!-- CASE STUDIES -->
   <section class="section">
     <div class="container fade-in-section">
+      <div class="portfolio-filters mb-4" role="group" aria-label="Filter case studies">
+        <button class="btn btn-sm btn-outline-secondary is-active" type="button" data-portfolio-filter="all" aria-pressed="true">All projects</button>
+        <button class="btn btn-sm btn-outline-secondary" type="button" data-portfolio-filter="government" aria-pressed="false">Government</button>
+        <button class="btn btn-sm btn-outline-secondary" type="button" data-portfolio-filter="field" aria-pressed="false">Field operations</button>
+        <button class="btn btn-sm btn-outline-secondary" type="button" data-portfolio-filter="logistics" aria-pressed="false">Logistics</button>
+      </div>
+      <p class="visually-hidden" id="portfolio-filter-status" aria-live="polite"></p>
 
       <!-- MFT case study -->
-      <article class="row g-4 align-items-start mb-5 pb-5 border-bottom">
+      <article class="row g-4 align-items-start mb-5 pb-5 border-bottom portfolio-project" data-category="government">
         <div class="col-lg-4">
           <span class="eyebrow">Case Study</span>
           <h2 class="section-title">MFT — Mfumo wa Fuatilia Taarifa</h2>
@@ -100,7 +107,7 @@
       </article>
 
       <!-- Sajili case study -->
-      <article class="row g-4 align-items-start mb-5 pb-5 border-bottom">
+      <article class="row g-4 align-items-start mb-5 pb-5 border-bottom portfolio-project" data-category="field">
         <div class="col-lg-4">
           <span class="eyebrow">Case Study</span>
           <h2 class="section-title">Sajili</h2>
@@ -120,7 +127,7 @@
       </article>
 
       <!-- Dubai Cargo case study -->
-      <article class="row g-4 align-items-start mb-5 pb-5 border-bottom">
+      <article class="row g-4 align-items-start mb-5 pb-5 border-bottom portfolio-project" data-category="logistics">
         <div class="col-lg-4">
           <span class="eyebrow">Case Study</span>
           <h2 class="section-title">Dubai Cargo System</h2>
@@ -180,6 +187,10 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="careers.html">Careers</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="client-portal.html">Client portal</a></li>
+          <li><a href="company-profile.html">Company profile</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>

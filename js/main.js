@@ -48,6 +48,43 @@
     }
   }
 
+  /* ---------- Portfolio case-study filters ---------- */
+  var portfolioFilters = document.querySelectorAll('[data-portfolio-filter]');
+  var portfolioProjects = document.querySelectorAll('.portfolio-project[data-category]');
+  var portfolioStatus = document.getElementById('portfolio-filter-status');
+  if (portfolioFilters.length && portfolioProjects.length) {
+    portfolioFilters.forEach(function (filter) {
+      filter.addEventListener('click', function () {
+        var category = filter.getAttribute('data-portfolio-filter');
+        var visibleCount = 0;
+
+        portfolioFilters.forEach(function (button) {
+          var isSelected = button === filter;
+          button.classList.toggle('is-active', isSelected);
+          button.setAttribute('aria-pressed', String(isSelected));
+        });
+
+        portfolioProjects.forEach(function (project) {
+          var isVisible = category === 'all' || project.getAttribute('data-category') === category;
+          project.hidden = !isVisible;
+          if (isVisible) visibleCount += 1;
+        });
+
+        if (portfolioStatus) {
+          portfolioStatus.textContent = visibleCount + (visibleCount === 1 ? ' project shown' : ' projects shown');
+        }
+      });
+    });
+  }
+
+  /* ---------- Printable company profile ---------- */
+  var printProfileButton = document.querySelector('[data-print-profile]');
+  if (printProfileButton) {
+    printProfileButton.addEventListener('click', function () {
+      window.print();
+    });
+  }
+
   /* ---------- Smooth scroll for in-page anchor links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function (e) {
