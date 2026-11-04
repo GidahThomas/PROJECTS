@@ -165,8 +165,29 @@ button:focus-visible,
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: linear-gradient(160deg, var(--akilisoft-primary) 0%, var(--akilisoft-primary-light) 100%);
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(37, 99, 235, 0.3), transparent 34%),
+    radial-gradient(ellipse at 12% 100%, rgba(37, 99, 235, 0.2), transparent 38%),
+    linear-gradient(128deg, #06172e 0%, var(--akilisoft-primary) 48%, #123d72 100%);
   color: #fff;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(191, 219, 254, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(191, 219, 254, 0.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+  content: "";
+  opacity: 0.42;
+  mask-image: linear-gradient(90deg, transparent 4%, #000 48%, #000 100%);
+  pointer-events: none;
+}
+
+.hero-home {
+  background-color: var(--akilisoft-primary);
 }
 
 .hero-home > .container {
@@ -215,13 +236,15 @@ button:focus-visible,
 .hero::after {
   position: absolute;
   z-index: -1;
-  top: -12rem;
-  right: -9rem;
+  top: -16rem;
+  right: 3%;
   width: min(52vw, 42rem);
   aspect-ratio: 1;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(191, 219, 254, 0.16);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(15, 157, 88, 0.2), transparent 68%);
+  background:
+    radial-gradient(circle, rgba(37, 99, 235, 0.27), rgba(37, 99, 235, 0.06) 42%, transparent 70%);
+  box-shadow: inset 0 0 5rem rgba(96, 165, 250, 0.08);
   content: "";
   animation: hero-glow 18s ease-in-out infinite alternate;
 }
@@ -268,6 +291,40 @@ button:focus-visible,
   margin-inline: auto;
 }
 
+.hero-artwork {
+  position: relative;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 0.55rem;
+  border: 1px solid rgba(219, 234, 254, 0.48);
+  border-radius: 1.35rem;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 1.75rem 4rem rgba(2, 12, 27, 0.32);
+  backdrop-filter: blur(12px);
+  animation: graphic-float 7s ease-in-out infinite;
+}
+
+.hero-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.hero-artwork figcaption {
+  position: absolute;
+  right: 1rem;
+  bottom: -0.75rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--akilisoft-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  box-shadow: 0 0.35rem 1rem rgba(2, 12, 27, 0.16);
+}
+
 .capability-card {
   height: 100%;
   padding: 1.5rem;
@@ -286,6 +343,11 @@ button:focus-visible,
   width: 64px;
   height: 64px;
   margin-bottom: 1rem;
+  transition: transform 0.25s ease;
+}
+
+.capability-card:hover .capability-icon {
+  transform: translateY(-3px) scale(1.05);
 }
 
 .product-visual {
@@ -309,6 +371,12 @@ button:focus-visible,
 .service-visual--teaser {
   margin-bottom: 1rem;
   border-radius: 0.65rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.pillar:hover .service-visual--teaser {
+  transform: scale(1.025);
+  filter: saturate(1.08);
 }
 
 .illustration-panel {
@@ -465,7 +533,9 @@ button:focus-visible,
 }
 
 .section-alt {
-  background-color: var(--akilisoft-bg-alt);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(191, 219, 254, 0.3), transparent 38%),
+    linear-gradient(135deg, #F7FAFF 0%, var(--akilisoft-bg-alt) 55%, #F4F8FF 100%);
 }
 
 .eyebrow {
@@ -659,7 +729,7 @@ button:focus-visible,
 
 .pillar:hover {
   transform: translateY(-3px);
-  border-color: rgba(15, 157, 88, 0.45);
+  border-color: rgba(37, 99, 235, 0.45);
   box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
 }
 
@@ -692,7 +762,7 @@ button:focus-visible,
 
 .team-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(15, 157, 88, 0.45);
+  border-color: rgba(37, 99, 235, 0.45);
   box-shadow: 0 12px 28px rgba(11, 37, 69, 0.08);
 }
 
@@ -880,13 +950,13 @@ button:focus-visible,
 .footer-email:hover,
 .footer-quick-links a:hover,
 .footer-bottom a:hover {
-  color: #78dfa6;
+  color: #93c5fd;
 }
 
 .footer-email:focus-visible,
 .footer-quick-links a:focus-visible,
 .footer-bottom a:focus-visible {
-  outline: 2px solid #78dfa6;
+  outline: 2px solid #93c5fd;
   outline-offset: 3px;
 }
 
@@ -1091,12 +1161,10 @@ button:focus-visible,
 
 @keyframes hero-enter {
   from {
-    opacity: 0;
     transform: translateY(14px);
   }
 
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
