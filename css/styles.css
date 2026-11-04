@@ -4,21 +4,21 @@
    ========================================================================== */
 
 :root {
-  --bs-primary: #0B2545;
-  --bs-primary-rgb: 11, 37, 69;
-  --bs-body-bg: #F7F9FC;
+  --bs-primary: #071B35;
+  --bs-primary-rgb: 7, 27, 53;
+  --bs-body-bg: #FFFFFF;
   --bs-body-color: #202b3c;
   --bs-body-font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --bs-link-color: #0B2545;
-  --bs-link-hover-color: #0F9D58;
+  --bs-link-color: #071B35;
+  --bs-link-hover-color: #2563EB;
 
-  --akilisoft-primary: #0B2545;
-  --akilisoft-primary-light: #13396b;
-  --akilisoft-accent: #0F9D58;
-  --akilisoft-accent-dark: #0c7d46;
-  --akilisoft-bg-alt: #EEF2F8;
+  --akilisoft-primary: #071B35;
+  --akilisoft-primary-light: #12345C;
+  --akilisoft-accent: #2563EB;
+  --akilisoft-accent-dark: #1D4ED8;
+  --akilisoft-bg-alt: #EAF2FF;
   --akilisoft-text-muted: #4d5c74;
-  --akilisoft-border: #dfe5ee;
+  --akilisoft-border: #D8E3F0;
 }
 
 body {
@@ -92,7 +92,7 @@ button:focus-visible,
 /* ---------- Header / Nav ---------- */
 #site-header {
   z-index: 1030;
-  background-color: rgba(247, 249, 252, 0.94);
+  background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(6px);
   transition: box-shadow 0.25s ease, background-color 0.25s ease;
   padding-top: 0.85rem;
@@ -101,7 +101,7 @@ button:focus-visible,
 
 #site-header.is-scrolled {
   box-shadow: 0 1px 3px rgba(11, 37, 69, 0.08);
-  background-color: rgba(247, 249, 252, 0.98);
+  background-color: rgba(255, 255, 255, 0.98);
 }
 
 .logo {
@@ -109,6 +109,18 @@ button:focus-visible,
   font-weight: 700;
   color: var(--akilisoft-primary);
   letter-spacing: -0.01em;
+}
+
+.logo svg rect {
+  fill: var(--akilisoft-primary);
+}
+
+.logo svg path {
+  stroke: var(--akilisoft-accent);
+}
+
+.logo svg circle {
+  fill: var(--akilisoft-accent);
 }
 
 .navbar-nav .nav-link {
@@ -157,6 +169,49 @@ button:focus-visible,
   color: #fff;
 }
 
+.hero-home > .container {
+  padding-block: clamp(4rem, 9vw, 7rem) !important;
+}
+
+.hero-home .hero-headline {
+  max-width: 860px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+.hero-home .hero-subheadline {
+  max-width: 680px;
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+}
+
+.home-hero-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.75rem;
+  margin: 2rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  list-style: none;
+}
+
+.home-hero-focus li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.home-hero-focus li::before {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #60A5FA;
+  content: "";
+}
+
 .hero::after {
   position: absolute;
   z-index: -1;
@@ -199,6 +254,209 @@ button:focus-visible,
   width: 100%;
   height: auto;
   animation: graphic-float 6s ease-in-out infinite;
+  filter: drop-shadow(0 1.5rem 2rem rgba(2, 12, 27, 0.22));
+}
+
+.visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-visual {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.capability-card {
+  height: 100%;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--akilisoft-border);
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(7, 27, 53, 0.08);
+}
+
+.capability-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.product-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 720 / 430;
+  object-fit: cover;
+  background: var(--akilisoft-bg-alt);
+  border-radius: 0.9rem 0.9rem 0 0;
+}
+
+.service-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  background: var(--akilisoft-bg-alt);
+}
+
+.service-visual--teaser {
+  margin-bottom: 1rem;
+  border-radius: 0.65rem;
+}
+
+.illustration-panel {
+  overflow: hidden;
+  border: 1px solid var(--akilisoft-border);
+  border-radius: 1rem;
+  background: var(--akilisoft-bg-alt);
+  box-shadow: 0 1rem 2.5rem rgba(7, 27, 53, 0.08);
+}
+
+.illustration-caption {
+  margin: 0;
+  padding: 0.65rem 1rem;
+  color: var(--akilisoft-text-muted);
+  background: #fff;
+  font-size: 0.78rem;
+}
+
+.career-team-visual {
+  max-width: 860px;
+}
+
+.case-study-visual {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  border: 1px solid var(--akilisoft-border);
+  border-radius: 0.8rem;
+  background: var(--akilisoft-bg-alt);
+}
+
+.home-founder-photo {
+  display: block;
+  width: 100%;
+  max-height: 390px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 1.15rem;
+  box-shadow: 0 1.25rem 2.5rem rgba(7, 27, 53, 0.14);
+}
+
+.home-founder-credit {
+  margin: 0 0 1.25rem;
+  color: var(--akilisoft-primary);
+  font-weight: 700;
+}
+
+.home-founder-credit span {
+  display: block;
+  color: var(--akilisoft-text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.home-product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  overflow: hidden;
+  border: 1px solid var(--akilisoft-border);
+  border-radius: 1rem;
+  background:
+    radial-gradient(ellipse at 100% 0, rgba(37, 99, 235, 0.08), transparent 58%),
+    #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(7, 27, 53, 0.045);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.home-product-card:hover,
+.home-product-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.38);
+  box-shadow: 0 1rem 2rem rgba(7, 27, 53, 0.1);
+}
+
+.home-product-icon {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1.5rem;
+  place-items: center;
+  border: 1px solid #DCE9FB;
+  border-radius: 0.9rem;
+  background: #EAF2FF;
+  color: var(--akilisoft-accent);
+}
+
+.home-product-index {
+  margin-bottom: 0.45rem;
+  color: var(--akilisoft-accent-dark);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+}
+
+.home-product-card h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1.16rem;
+  letter-spacing: -0.02em;
+}
+
+.home-product-card p {
+  margin-bottom: 1.25rem;
+  color: var(--akilisoft-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.home-product-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: auto;
+  color: var(--akilisoft-accent-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-product-link span {
+  transition: transform 0.2s ease;
+}
+
+.home-product-link:hover span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991.98px) {
+  .home-founder-photo {
+    max-width: 340px;
+    max-height: 360px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-product-card,
+  .home-product-link span {
+    transition: none;
+  }
+
+  .home-product-card:hover,
+  .home-product-card:focus-within {
+    transform: none;
+  }
 }
 
 /* ---------- Sections ---------- */
@@ -585,32 +843,6 @@ button:focus-visible,
   font-weight: 600;
 }
 
-.contact-form .form-control:focus {
-  border-color: var(--akilisoft-accent);
-  box-shadow: 0 0 0 0.2rem rgba(15, 157, 88, 0.15);
-}
-
-.contact-form .form-control {
-  min-height: 3rem;
-  border-color: var(--akilisoft-border);
-  border-radius: 0.65rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-form textarea.form-control {
-  min-height: 8rem;
-}
-
-/* Align Bootstrap's invalid state with brand */
-.contact-form .form-control:invalid,
-.was-validated .contact-form .form-control:invalid {
-  border-color: #b42318;
-}
-
-.was-validated .contact-form .form-control:invalid:focus {
-  box-shadow: 0 0 0 0.2rem rgba(180, 35, 24, 0.15);
-}
-
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 3px solid var(--akilisoft-accent);
@@ -806,6 +1038,10 @@ button:focus-visible,
     padding-block: 2.5rem !important;
   }
 
+  .hero-home > .container {
+    padding-block: 3.75rem !important;
+  }
+
   .hero-headline {
     font-size: clamp(1.85rem, 7.5vw, 2.5rem);
     line-height: 1.15;
@@ -830,10 +1066,6 @@ button:focus-visible,
   .cta-banner .btn {
     width: 100%;
     max-width: 22rem;
-  }
-
-  .contact-form .card-body {
-    padding: 1.25rem !important;
   }
 
   .team-founder-details {

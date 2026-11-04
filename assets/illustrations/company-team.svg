@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="460" viewBox="0 0 680 460" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration of a technology team at work</title><desc id="desc">Stylized non-photographic people collaborating around software diagrams and a shared screen.</desc>
+  <rect width="680" height="460" rx="28" fill="#EAF2FF"/><circle cx="547" cy="94" r="55" fill="#D6E8FF"/><circle cx="98" cy="353" r="45" fill="#D6E8FF"/>
+  <rect x="110" y="52" width="460" height="205" rx="15" fill="#071B35"/><rect x="122" y="64" width="436" height="181" rx="9" fill="#F8FAFD"/>
+  <rect x="139" y="82" width="132" height="9" rx="4.5" fill="#071B35"/><rect x="139" y="101" width="76" height="6" rx="3" fill="#94A3B8"/>
+  <rect x="139" y="124" width="165" height="92" rx="8" fill="#fff" stroke="#E2E8F0"/><path d="M154 193h134M154 174h134M154 155h134" stroke="#EEF2F7"/><path d="m160 188 23-22 19 9 23-26 18 12 27-16" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="320" y="124" width="216" height="92" rx="8" fill="#fff" stroke="#E2E8F0"/><circle cx="352" cy="155" r="8" fill="#DBEAFE"/><rect x="370" y="151" width="122" height="7" rx="3.5" fill="#CBD5E1"/><rect x="370" y="166" width="87" height="6" rx="3" fill="#E2E8F0"/><circle cx="352" cy="190" r="8" fill="#DBEAFE"/><rect x="370" y="186" width="143" height="7" rx="3.5" fill="#CBD5E1"/>
+  <path d="M306 257h68v27h87a11 11 0 0 1 11 11v7H209v-7a11 11 0 0 1 11-11h86v-27Z" fill="#B7CAE2"/>
+  <rect x="155" y="287" width="370" height="12" rx="6" fill="#071B35"/>
+  <path d="M231 349c0-34 20-54 49-54s49 20 49 54v22H231v-22Z" fill="#2563EB"/><circle cx="280" cy="272" r="24" fill="#D9A17C"/><path d="M257 271c0-20 11-33 27-33 19 0 29 13 29 33-9-6-15-14-17-21-9 10-22 17-39 21Z" fill="#17233B"/><path d="m250 369 30-38 30 38" stroke="#EAF2FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M350 354c0-33 19-52 46-52 29 0 47 19 47 52v17H350v-17Z" fill="#93C5FD"/><circle cx="396" cy="276" r="23" fill="#8D5E45"/><path d="M374 274c0-19 10-31 24-31 17 0 26 12 26 31-10-5-16-12-19-20-8 9-18 15-31 20Z" fill="#222E43"/><path d="m370 371 26-35 27 35" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="57" y="204" width="91" height="64" rx="8" fill="#fff" stroke="#BBD4F4" stroke-width="2"/><path d="M72 225h58m-58 13h40m-40 13h50" stroke="#93B7E2" stroke-width="4" stroke-linecap="round"/><circle cx="119" cy="225" r="4" fill="#2563EB"/>
+  <rect x="534" y="272" width="91" height="64" rx="8" fill="#fff" stroke="#BBD4F4" stroke-width="2"/><path d="M550 293h58m-58 13h40m-40 13h50" stroke="#93B7E2" stroke-width="4" stroke-linecap="round"/><circle cx="597" cy="293" r="4" fill="#2563EB"/>
+</svg>

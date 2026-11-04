@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative cargo operations dashboard mockup</title>
+  <desc id="desc">A conceptual cargo-management interface with shipment rows, status badges and an illustrative route map. Not a production screenshot.</desc>
+  <rect width="720" height="430" rx="22" fill="#EAF2FF"/><rect x="28" y="25" width="664" height="380" rx="14" fill="#fff" stroke="#D8E3F0"/>
+  <path d="M28 39a14 14 0 0 1 14-14h636a14 14 0 0 1 14 14v35H28V39Z" fill="#071B35"/>
+  <circle cx="50" cy="48" r="4" fill="#60A5FA"/><text x="65" y="52" fill="#fff" font-family="Arial,sans-serif" font-size="12" font-weight="700">CARGO OPERATIONS · ILLUSTRATIVE MOCKUP</text>
+  <rect x="46" y="91" width="628" height="67" rx="9" fill="#F8FAFD" stroke="#E2E8F0"/>
+  <text x="62" y="113" fill="#64748B" font-family="Arial,sans-serif" font-size="9">SHIPMENTS</text><text x="62" y="143" fill="#071B35" font-family="Arial,sans-serif" font-size="23" font-weight="700">248</text>
+  <text x="208" y="113" fill="#64748B" font-family="Arial,sans-serif" font-size="9">IN TRANSIT</text><text x="208" y="143" fill="#071B35" font-family="Arial,sans-serif" font-size="23" font-weight="700">76</text>
+  <text x="355" y="113" fill="#64748B" font-family="Arial,sans-serif" font-size="9">AWAITING HANDLING</text><text x="355" y="143" fill="#071B35" font-family="Arial,sans-serif" font-size="23" font-weight="700">19</text>
+  <text x="541" y="113" fill="#64748B" font-family="Arial,sans-serif" font-size="9">DELIVERED</text><text x="541" y="143" fill="#071B35" font-family="Arial,sans-serif" font-size="23" font-weight="700">153</text>
+  <rect x="46" y="172" width="379" height="205" rx="9" fill="#fff" stroke="#E2E8F0"/><text x="62" y="195" fill="#071B35" font-family="Arial,sans-serif" font-size="11" font-weight="700">Shipment tracking</text><text x="62" y="212" fill="#64748B" font-family="Arial,sans-serif" font-size="9">Illustrative route view</text>
+  <path d="M68 324c53-74 98-59 132-35 45 31 71-53 117-43 35 7 54 44 86 8" stroke="#BFDBFE" stroke-width="17" stroke-linecap="round"/>
+  <path d="M68 324c53-74 98-59 132-35 45 31 71-53 117-43 35 7 54 44 86 8" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 7"/>
+  <circle cx="68" cy="324" r="9" fill="#fff" stroke="#2563EB" stroke-width="4"/><circle cx="403" cy="254" r="9" fill="#fff" stroke="#2563EB" stroke-width="4"/>
+  <rect x="444" y="172" width="230" height="205" rx="9" fill="#fff" stroke="#E2E8F0"/><text x="460" y="195" fill="#071B35" font-family="Arial,sans-serif" font-size="11" font-weight="700">Recent consignments</text>
+  <path d="M460 211h198M460 256h198M460 301h198M460 346h198" stroke="#EDF1F6"/>
+  <rect x="460" y="223" width="31" height="23" rx="5" fill="#EAF2FF"/><path d="M466 230h12l5 5v4h-17v-9Zm4 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm9 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" fill="#2563EB"/><rect x="500" y="226" width="78" height="6" rx="3" fill="#CBD5E1"/><rect x="500" y="237" width="54" height="5" rx="2.5" fill="#E2E8F0"/><rect x="608" y="227" width="43" height="15" rx="7" fill="#DBEAFE"/>
+  <rect x="460" y="268" width="31" height="23" rx="5" fill="#EAF2FF"/><path d="M466 275h12l5 5v4h-17v-9Zm4 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm9 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" fill="#2563EB"/><rect x="500" y="271" width="91" height="6" rx="3" fill="#CBD5E1"/><rect x="500" y="282" width="58" height="5" rx="2.5" fill="#E2E8F0"/><rect x="608" y="272" width="43" height="15" rx="7" fill="#FEF3C7"/>
+  <rect x="460" y="313" width="31" height="23" rx="5" fill="#EAF2FF"/><path d="M466 320h12l5 5v4h-17v-9Zm4 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm9 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" fill="#2563EB"/><rect x="500" y="316" width="83" height="6" rx="3" fill="#CBD5E1"/><rect x="500" y="327" width="50" height="5" rx="2.5" fill="#E2E8F0"/><rect x="608" y="317" width="43" height="15" rx="7" fill="#DCFCE7"/>
+  <text x="46" y="395" fill="#64748B" font-family="Arial,sans-serif" font-size="9">Illustrative interface concept · not a production screenshot</text>
+</svg>

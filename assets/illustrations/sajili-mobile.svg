@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative Sajili field-data mobile app mockup</title>
+  <desc id="desc">A mobile field form with an offline-ready indicator and queued sync concept. Illustrative interface, not a production screenshot.</desc>
+  <rect width="720" height="430" rx="22" fill="#EAF2FF"/>
+  <circle cx="170" cy="215" r="130" fill="#D7E8FF"/><circle cx="170" cy="215" r="99" stroke="#A9CCFA" stroke-width="2" stroke-dasharray="6 8"/>
+  <rect x="114" y="33" width="126" height="364" rx="25" fill="#071B35"/><rect x="121" y="43" width="112" height="344" rx="19" fill="#fff"/>
+  <rect x="157" y="50" width="40" height="5" rx="2.5" fill="#64748B"/>
+  <path d="M121 75h112v57H121z" fill="#F7FAFF"/><text x="135" y="96" fill="#071B35" font-family="Arial,sans-serif" font-size="13" font-weight="700">Sajili</text><text x="135" y="113" fill="#64748B" font-family="Arial,sans-serif" font-size="8">FIELD SITE RECORD</text>
+  <rect x="135" y="143" width="83" height="22" rx="11" fill="#DCFCE7"/><circle cx="148" cy="154" r="4" fill="#16A34A"/><text x="157" y="157" fill="#166534" font-family="Arial,sans-serif" font-size="8" font-weight="700">Offline ready</text>
+  <text x="135" y="185" fill="#475569" font-family="Arial,sans-serif" font-size="8">SITE NAME</text><rect x="135" y="192" width="83" height="27" rx="6" fill="#fff" stroke="#CBD5E1"/><text x="143" y="209" fill="#071B35" font-family="Arial,sans-serif" font-size="9">Mwangaza 04</text>
+  <text x="135" y="239" fill="#475569" font-family="Arial,sans-serif" font-size="8">INSTALLATION TYPE</text><rect x="135" y="246" width="83" height="27" rx="6" fill="#fff" stroke="#CBD5E1"/><text x="143" y="263" fill="#071B35" font-family="Arial,sans-serif" font-size="9">Solar system</text>
+  <rect x="135" y="288" width="83" height="33" rx="7" fill="#2563EB"/><text x="153" y="308" fill="#fff" font-family="Arial,sans-serif" font-size="9" font-weight="700">Save record</text>
+  <circle cx="177" cy="371" r="5" fill="#CBD5E1"/>
+  <rect x="319" y="87" width="323" height="264" rx="18" fill="#fff" stroke="#D8E3F0"/>
+  <rect x="343" y="111" width="47" height="47" rx="12" fill="#EAF2FF"/><path d="M356 134h21m-10-10v20" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="405" y="126" fill="#071B35" font-family="Arial,sans-serif" font-size="15" font-weight="700">Work continues offline</text>
+  <text x="405" y="146" fill="#64748B" font-family="Arial,sans-serif" font-size="10">Capture structured field data without a signal.</text>
+  <path d="M343 179h275" stroke="#E8EEF5"/>
+  <circle cx="361" cy="210" r="12" fill="#DBEAFE"/><path d="M356 210h10m-5-5v10" stroke="#2563EB" stroke-width="1.7" stroke-linecap="round"/><text x="386" y="207" fill="#071B35" font-family="Arial,sans-serif" font-size="10" font-weight="700">Record saved on device</text><text x="386" y="222" fill="#64748B" font-family="Arial,sans-serif" font-size="9">Structured site details are ready.</text>
+  <circle cx="361" cy="257" r="12" fill="#DBEAFE"/><path d="M355 257h12m-5-5 5 5-5 5" stroke="#2563EB" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><text x="386" y="254" fill="#071B35" font-family="Arial,sans-serif" font-size="10" font-weight="700">Sync when connected</text><text x="386" y="269" fill="#64748B" font-family="Arial,sans-serif" font-size="9">Queued records can sync when online.</text>
+  <rect x="343" y="299" width="275" height="31" rx="8" fill="#F1F6FF"/><circle cx="359" cy="314" r="5" fill="#2563EB"/><text x="372" y="318" fill="#1E3A5F" font-family="Arial,sans-serif" font-size="9">Offline-first field capture concept</text>
+  <text x="321" y="381" fill="#64748B" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1">ILLUSTRATIVE MOCKUP · NOT A PRODUCTION SCREENSHOT</text>
+</svg>

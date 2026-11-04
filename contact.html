@@ -7,7 +7,7 @@
 <meta name="description" content="Get in touch with Akilisoft Tech Company Limited, Dar es Salaam. Send us a message about a govtech, field data, or business software project.">
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="theme-color" content="#0B2545">
+<meta name="theme-color" content="#071B35">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Akilisoft Tech Company Limited">
@@ -15,8 +15,10 @@
 <meta property="og:description" content="Get in touch to talk about a govtech, field data, or business software project.">
 <meta property="og:url" content="https://akilisoft.co.tz/contact.html">
 <meta property="og:image" content="https://akilisoft.co.tz/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Akilisoft — dependable software systems for Tanzania's institutions">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact — Akilisoft Tech Company Limited">
 <meta name="twitter:description" content="Get in touch with Akilisoft Tech Company Limited.">
@@ -40,7 +42,7 @@
   "@type": "Organization",
   "name": "Akilisoft Tech Company Limited",
   "url": "https://akilisoft.co.tz",
-  "logo": "https://akilisoft.co.tz/assets/og-image.png",
+  "logo": "https://akilisoft.co.tz/assets/favicon.svg",
   "email": "info@akilisoft.co.tz",
   "address": {
     "@type": "PostalAddress",
@@ -121,71 +123,28 @@
               <span class="small text-body-secondary">We typically reply within 1–2 business days.</span>
             </li>
           </ul>
+          <figure class="illustration-panel mt-4">
+            <img class="visual-image" src="assets/illustrations/technology-office.svg"
+                 alt="Illustration of a modern technology office with a shared software dashboard"
+                 width="640" height="400" loading="lazy" decoding="async">
+            <figcaption class="illustration-caption">Illustrative technology-office artwork.</figcaption>
+          </figure>
         </div>
 
         <div class="col-lg-7">
-          <!-- Replace YOUR_FORMSPREE_ID with your real Formspree form ID.
-               Alternative: use Web3Forms (https://web3forms.com) or your own handler. -->
-          <form
-            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-            method="POST"
-            class="contact-form needs-validation card border-0 shadow-sm"
-            id="contactForm"
-            novalidate>
-
+          <section class="card border-0 shadow-sm" aria-labelledby="email-contact-heading">
             <div class="card-body p-4">
-
-              <!-- Honeypot: hidden from users, catches simple bots -->
-              <div style="position:absolute;left:-9999px;" aria-hidden="true">
-                <label for="_gotcha">Leave this field empty</label>
-                <input type="text" name="_gotcha" id="_gotcha" tabindex="-1" autocomplete="off">
-              </div>
-
-              <!-- Optional: redirect back to a thank-you URL after success.
-                   Remove if you prefer inline success message. -->
-              <input type="hidden" name="_next" value="https://akilisoft.co.tz/contact.html?sent=1">
-              <input type="hidden" name="_subject" value="New enquiry from Akilisoft website">
-
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name"
-                       required autocomplete="name" aria-describedby="name-error">
-                <div class="invalid-feedback" id="name-error">Please enter your name.</div>
-              </div>
-
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email"
-                       required autocomplete="email" aria-describedby="email-error">
-                <div class="invalid-feedback" id="email-error">Please enter a valid email address.</div>
-              </div>
-
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5"
-                          required aria-describedby="message-error"></textarea>
-                <div class="invalid-feedback" id="message-error">Please enter a message.</div>
-              </div>
-
-              <button type="submit" class="btn btn-accent w-100">Send Message</button>
-
-              <div id="form-success"
-                   class="alert alert-success d-none mt-3"
-                   role="status" aria-live="polite">
-                Thanks — your message has been sent. We'll get back to you within 1–2 business days.
-                If you'd rather email us directly, write to
-                <a href="mailto:info@akilisoft.co.tz">info@akilisoft.co.tz</a>.
-              </div>
-
-              <div id="form-error"
-                   class="alert alert-danger d-none mt-3"
-                   role="alert" aria-live="assertive">
-                Something went wrong sending your message. Please try again, or email
-                <a href="mailto:info@akilisoft.co.tz">info@akilisoft.co.tz</a> directly.
-              </div>
-
+              <h2 id="email-contact-heading" class="h4">Contact us by email</h2>
+              <p>Use your email app to write to our team. Your message is sent only after you press Send in that app.</p>
+              <a class="btn btn-accent w-100" href="mailto:info@akilisoft.co.tz?subject=Website%20enquiry">
+                Email Akilisoft
+              </a>
+              <p class="small text-body-secondary mt-3 mb-0">
+                If the button does not open an email app, copy this address:
+                <a href="mailto:info@akilisoft.co.tz">info@akilisoft.co.tz</a>
+              </p>
             </div>
-          </form>
+          </section>
         </div>
 
       </div>
@@ -235,6 +194,7 @@
 </footer>
 
 <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
