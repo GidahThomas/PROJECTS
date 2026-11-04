@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akilisoft.co.tz/sitemap.xml
+Sitemap: https://projects-opal-seven.vercel.app/sitemap.xml

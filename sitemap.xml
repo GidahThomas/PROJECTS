@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://akilisoft.co.tz/</loc>
+    <loc>https://projects-opal-seven.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/about.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/products.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/products.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/services.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/services.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/portfolio.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/portfolio.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/careers.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/careers.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/contact.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/insights.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/insights.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/support.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/support.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/client-portal.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/client-portal.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://akilisoft.co.tz/company-profile.html</loc>
+    <loc>https://projects-opal-seven.vercel.app/company-profile.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

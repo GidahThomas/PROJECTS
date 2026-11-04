@@ -1,6 +1,10 @@
 name: Website health check
 
 on:
+  push:
+    branches:
+      - main
+  pull_request:
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
@@ -9,15 +13,43 @@ permissions:
   contents: read
 
 jobs:
-  check-pages:
+  static-site-check:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check public website pages
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate pages, local references, and sitemap
+        run: |
+          node scripts/check-site.js
+          node --check js/main.js
+          node --check scripts/check-site.js
+
+  check-deployed-site:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: static-site-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      BASE_URL: https://projects-opal-seven.vercel.app
+    steps:
+      - name: Check deployed pages and assets
         run: |
           set -euo pipefail
-          for path in / /about.html /products.html /services.html /portfolio.html /careers.html /contact.html /robots.txt /sitemap.xml /assets/og-image.png; do
-            status="$(curl --silent --show-error --location --output /dev/null --write-out '%{http_code}' --retry 2 --retry-delay 5 "https://akilisoft.co.tz${path}")"
+          for path in \
+            / /index.html /about.html /products.html /services.html /portfolio.html \
+            /careers.html /contact.html /insights.html /support.html \
+            /client-portal.html /company-profile.html /robots.txt /sitemap.xml \
+            /css/styles.css /js/main.js /vendor/bootstrap/bootstrap.min.css \
+            /vendor/bootstrap/bootstrap.bundle.min.js /assets/favicon.svg \
+            /assets/og-image.png; do
+            status="$(curl --silent --show-error --location --output /dev/null --write-out '%{http_code}' --retry 2 --retry-delay 5 "${BASE_URL}${path}")"
             if [ "$status" -lt 200 ] || [ "$status" -ge 400 ]; then
               echo "Health check failed for ${path}: HTTP ${status}"
               exit 1

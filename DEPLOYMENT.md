@@ -2,10 +2,12 @@
 
 ## Vercel
 
-1. Import this repository into Vercel and use the repository root as the project root.
-2. Select the **Other** framework preset. This is a static HTML, CSS, and JavaScript site with no build step; leave the build command and output directory unset unless Vercel requires a value.
-3. Add `akilisoft.co.tz` in the Vercel project's domain settings and apply the DNS records Vercel provides. The canonical URLs and health check already use this domain.
-4. Enable Web Analytics in the Vercel project dashboard. The pages include Vercel's analytics script, but analytics data is unavailable until the feature is enabled.
+The current public deployment is [projects-opal-seven.vercel.app](https://projects-opal-seven.vercel.app/). The repository is configured as a static site with no build step.
+
+1. Connect the repository to Vercel and use the repository root as the project root.
+2. Select the **Other** framework preset. Leave the build command and output directory unset unless Vercel requires a value.
+3. Configure `akilisoft.co.tz` in Vercel and complete the DNS setup before using it as the public canonical domain. Confirm the domain resolves and serves every route before changing canonical URLs and sitemap entries.
+4. Enable Web Analytics in the Vercel project dashboard if analytics are required. The deployed pages may include Vercel's analytics script, but analytics data is unavailable until the feature is enabled.
 
 ## Contact
 
@@ -25,4 +27,4 @@ The site uses original, local SVG illustrations in `assets/illustrations/` and t
 
 ## Website health checks
 
-The GitHub Actions workflow at `.github/workflows/site-health.yml` checks the production pages, sitemap, robots file, and social preview image hourly. Enable GitHub Actions for the repository; the checks will only pass once `https://akilisoft.co.tz` serves those routes.
+The GitHub Actions workflow at `.github/workflows/site-health.yml` validates local HTML links, image dimensions, and sitemap coverage on pushes and pull requests. Its scheduled/manual production check verifies all pages and key assets on the current Vercel deployment.
